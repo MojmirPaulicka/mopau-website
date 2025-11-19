@@ -27,7 +27,7 @@
   border-radius: 0.75rem;
 }
 
-nav ul {
+.navList {
   display: flex;
   list-style: none;
   gap: 1.5rem;
@@ -36,17 +36,17 @@ nav ul {
   font-weight: 600;
 }
 
-nav a {
+.navLink {
   text-decoration: none;
   color: #0f172a;
 }
 
-nav a:hover,
-nav a:focus-visible {
+.navLink:hover,
+.navLink:focus-visible {
   color: #2563eb;
 }
 
-main {
+.main {
   flex: 1;
 }
 
@@ -71,7 +71,7 @@ main {
     gap: 1rem;
   }
 
-  nav ul {
-    flex-wrap: wrap;
+    .navList {
+      flex-wrap: wrap;
+    }
   }
-}
