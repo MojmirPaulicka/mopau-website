@@ -1,13 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { ReactNode } from 'react';
 import styles from './Layout.module.css';
-
-interface LayoutProps {
-  children: ReactNode;
-  title?: string;
-  description?: string;
-}
 
 const navLinks = [
   { href: '#services', label: 'Services' },
@@ -15,7 +8,7 @@ const navLinks = [
   { href: '#contact', label: 'Contact' }
 ];
 
-export function Layout({ children, title = 'Mopau Studio', description = 'Digital studio site scaffold' }: LayoutProps) {
+export function Layout({ children, title = 'Mopau Studio', description = 'Digital studio site scaffold' }) {
   return (
     <>
       <Head>
@@ -33,16 +26,18 @@ export function Layout({ children, title = 'Mopau Studio', description = 'Digita
             </div>
           </div>
           <nav>
-            <ul>
+            <ul className={styles.navList}>
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link className={styles.navLink} href={link.href}>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
         </header>
-        <main>{children}</main>
+        <main className={styles.main}>{children}</main>
         <footer className={styles.footer}>
           <p>© {new Date().getFullYear()} Mopau Studio. All rights reserved.</p>
           <div className={styles.socialRow}>
