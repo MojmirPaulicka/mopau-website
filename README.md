@@ -31,3 +31,7 @@ src/styles/          # Global and module stylesheets
 ```
 
 The home page currently lives at `src/pages/index.tsx` and renders a simple navigation bar, hero, services grid, work highlights, and contact form.
+
+## Product requirements & planning
+
+High-level requirements, personas, information architecture, and MVP acceptance criteria are documented in [`docs/requirements.md`](docs/requirements.md). Update that file alongside feature work so future issues and pull requests stay aligned with Mopau Studio's mission and calls-to-action.
